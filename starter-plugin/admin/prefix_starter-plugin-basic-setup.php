@@ -19,13 +19,12 @@ if ( !defined('ABSPATH') ) exit;
 /**
  * Plugin activatation todo list
  *
- * this function runs when user activates the plugin
+ * This function runs when user activates the plugin. Used in register_activation_hook in the main plugin file. 
  * @since	1.0
  */
 function prefix_activate_plugin() {
 	
 }
-register_activation_hook( __FILE__, 'prefix_activate_plugin' );
 
 
 /**

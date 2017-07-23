@@ -13,6 +13,13 @@
  
  
 /**
+ * This plugin was developed using the WordPress starter plugin template by Arun Basil Lal <arunbasillal@gmail.com>
+ * Please leave this credit and the directory structure intact for future developers who might read the code. 
+ * @Github		https://github.com/arunbasillal/WordPress-Starter-Plugin
+ */
+ 
+ 
+/**
  * ~ Directory Structure ~
  *
  * /admin/ 						- Plugin backend stuff.
@@ -75,10 +82,13 @@ if (!defined('PREFIX_STARTER_PLUGIN_DIR'))
  */
 if (!defined('PREFIX_VERSION_NUM'))
     define('PREFIX_VERSION_NUM', '1.0');
-add_option('abl_prefix_version', PREFIX_VERSION_NUM);
+update_option('abl_prefix_version', PREFIX_VERSION_NUM);	// Change this to add_option if a release needs to check installed version. Refer the @refer url.
 
 
 // Load everything
 require_once( PREFIX_STARTER_PLUGIN_DIR . '/admin/prefix_starter-plugin-loader.php');
+
+// Register activation hook (this has to be in the main plugin file.)
+register_activation_hook( __FILE__, 'prefix_activate_plugin' );
 
 ?>

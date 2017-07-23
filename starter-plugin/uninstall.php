@@ -20,5 +20,6 @@ if ( !defined('WP_UNINSTALL_PLUGIN') ) die;
  * @since		1.0
  */ 
 delete_option( 'prefix_settings' );
+delete_option( 'abl_prefix_version' );
  
 ?>
