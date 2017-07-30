@@ -38,13 +38,13 @@ function prefix_general_settings_field_callback() {
 
 	// General Settings. Name of form element should be same as the setting name in register_setting(). ?>
 	
-	<!-- Setting one  -->
+	<!-- Setting one -->
 	<input type="checkbox" name="prefix_settings[setting_one]" id="prefix_settings[setting_one]" value="1" 
 		<?php if ( isset( $settings['setting_one'] ) ) { checked( '1', $settings['setting_one'] ); } ?>>
 		<label for="prefix_settings[setting_one]"><?php esc_html_e('Setting one', 'abl_prefix_td') ?></label>
 		<br>
 		
-	<!-- Setting tne  -->
+	<!-- Setting two -->
 	<input type="checkbox" name="prefix_settings[setting_two]" id="prefix_settings[setting_two]" value="1" 
 		<?php if ( isset( $settings['setting_two'] ) ) { checked( '1', $settings['setting_two'] ); } ?>>
 		<label for="prefix_settings[setting_two]"><?php esc_html_e('Setting two', 'abl_prefix_td') ?></label>
