@@ -78,7 +78,7 @@ if (!defined('PREFIX_STARTER_PLUGIN_DIR'))
  *
  * @since 		1.0
  * @constant 	PREFIX_VERSION_NUM		the version number of the current version
- * @refer		https://www.smashingmagazine.com/2011/03/ten-things-every-wordpress-plugin-developer-should-know/
+ * @refer		https://codex.wordpress.org/Creating_Tables_with_Plugins#Adding_an_Upgrade_Function
  */
 if (!defined('PREFIX_VERSION_NUM'))
     define('PREFIX_VERSION_NUM', '1.0');

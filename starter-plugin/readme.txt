@@ -3,7 +3,8 @@ Contributors: arunbasillal
 Donate link: http://millionclues.com/donate/
 Tags: add, some, tags
 Requires at least: 2.0
-Tested up to: 4.4.2
+Tested up to: 4.8.1
+Requires PHP: 5.5
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -65,6 +66,7 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 == Changelog ==
 
 = 1.0 =
+* Date: 
 * First release of the plugin.
 
 == Upgrade Notice ==
