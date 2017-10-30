@@ -8,10 +8,8 @@
  * @function	prefix_validater_and_sanitizer()	Validate And Sanitize User Input Before Its Saved To Database
  */
 
-
 // Exit if accessed directly
-if ( !defined('ABSPATH') ) exit;
- 
+if ( ! defined('ABSPATH') ) exit; 
  
 /**
  * Add admin menu pages
@@ -23,7 +21,6 @@ function prefix_add_menu_links() {
 	add_options_page ( __('Starter Plugin','abl_prefix_td'), __('Starter Plugin','abl_prefix_td'), 'update_core', 'starter-plugin','prefix_admin_interface_render'  );
 }
 add_action( 'admin_menu', 'prefix_add_menu_links' );
-
 
 /**
  * Register Settings
@@ -68,7 +65,6 @@ function prefix_validater_and_sanitizer ( $input ) {
 	return $input;
 }
 
-
 /**
  * Set default values for settings
  *
@@ -79,5 +75,3 @@ $defaults = array(
 				'setting_one' 	=> '1',
 				'setting_two' 	=> '1',
 			);
-
-?>

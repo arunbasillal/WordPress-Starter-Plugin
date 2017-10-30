@@ -11,10 +11,8 @@
  * @function	prefix_footer_version()			Admin footer version
  */
 
-
 // Exit if accessed directly
-if ( !defined('ABSPATH') ) exit;
-
+if ( ! defined('ABSPATH') ) exit;
  
 /**
  * Plugin activatation todo list
@@ -26,7 +24,6 @@ function prefix_activate_plugin() {
 	
 }
 
-
 /**
  * Load plugin text domain
  *
@@ -36,7 +33,6 @@ function prefix_load_plugin_textdomain() {
     load_plugin_textdomain( 'abl_prefix_td', FALSE, PREFIX_STARTER_PLUGIN_DIR . '/languages/' );
 }
 add_action( 'plugins_loaded', 'prefix_load_plugin_textdomain' );
-
 
 /**
  * Print direct link to plugin settings in plugins list in admin
@@ -52,8 +48,6 @@ function prefix_settings_link( $links ) {
 	);
 }
 add_filter( 'plugin_action_links_' . PREFIX_STARTER_PLUGIN . '/prefix_starter-plugin.php', 'prefix_settings_link' );
-
-
 
 /**
  * Add donate and other links to plugins list
@@ -72,7 +66,6 @@ function prefix_plugin_row_meta( $links, $file ) {
 	return $links;
 }
 add_filter( 'plugin_row_meta', 'prefix_plugin_row_meta', 10, 2 );
-
 
 /**
  * Admin footer text
@@ -115,5 +108,3 @@ function prefix_footer_version($default) {
 	return 'Plugin version ' . PREFIX_VERSION_NUM;
 }
 add_filter( 'update_footer', 'prefix_footer_version', 11 );
-
-?>

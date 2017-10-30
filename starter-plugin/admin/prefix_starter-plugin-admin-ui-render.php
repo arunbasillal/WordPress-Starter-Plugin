@@ -8,10 +8,8 @@
  * @function	prefix_admin_interface_render()				Admin interface renderer
  */
 
- 
 // Exit if accessed directly
-if ( !defined('ABSPATH') ) exit;
-
+if ( ! defined('ABSPATH') ) exit;
 
 /**
  * Callback function for General Settings section
@@ -21,7 +19,6 @@ if ( !defined('ABSPATH') ) exit;
 function prefix_general_settings_section_callback() {
 	echo '<p>' . __('A long description for the settings section goes here.', 'abl_prefix_td') . '</p>';
 }
-
 
 /**
  * Callback function for General Settings field
@@ -53,7 +50,6 @@ function prefix_general_settings_field_callback() {
 	<?php
 }
  
-
 /**
  * Admin interface renderer
  *
@@ -96,5 +92,3 @@ function prefix_admin_interface_render () {
 	</div>
 	<?php
 }
- 
-?>
