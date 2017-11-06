@@ -6,6 +6,7 @@
  * @function	prefix_add_menu_links()		Add admin menu pages
  * @function	prefix_register_settings	Register Settings
  * @function	prefix_validater_and_sanitizer()	Validate And Sanitize User Input Before Its Saved To Database
+ * @function	prefix_get_settings()		Get settings from database
  */
 
 // Exit if accessed directly
@@ -64,14 +65,21 @@ add_action( 'admin_init', 'prefix_register_settings' );
 function prefix_validater_and_sanitizer ( $input ) {
 	return $input;
 }
-
+			
 /**
- * Set default values for settings
+ * Get settings from database
  *
  * @since 	1.0
+ * @return	Array	A merged array of default and settings saved in database. 
  */
-// Default Values For Settings
-$defaults = array(
+function prefix_get_settings() {
+
+	$defaults = array(
 				'setting_one' 	=> '1',
 				'setting_two' 	=> '1',
 			);
+
+	$settings = wp_parse_args( get_option('prefix_settings'), $defaults );
+	
+	return $settings;
+}

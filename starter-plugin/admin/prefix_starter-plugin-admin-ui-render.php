@@ -27,11 +27,8 @@ function prefix_general_settings_section_callback() {
  */
 function prefix_general_settings_field_callback() {	
 
-	// Default Values For Settings
-	global $defaults;
-
 	// Get Settings
-	$settings = get_option('prefix_settings', $defaults);
+	$settings = prefix_get_settings();
 
 	// General Settings. Name of form element should be same as the setting name in register_setting(). ?>
 	
