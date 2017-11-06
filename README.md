@@ -19,7 +19,6 @@ A well documented starter plugin for quick WordPress plugin development.
 # TODO
 
 - Note: (S&R) = Search and Replace by matching case.
-
 - Plugin name: Starter Plugin (S&R)
 - Plugin folder slug: starter-plugin (S&R)
 - Decide on a prefix for the plugin (S&R)
