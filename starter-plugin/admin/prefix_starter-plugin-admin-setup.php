@@ -79,7 +79,7 @@ function prefix_get_settings() {
 				'setting_two' 	=> '1',
 			);
 
-	$settings = wp_parse_args( get_option('prefix_settings'), $defaults );
+	$settings = get_option('prefix_settings', $defaults);
 	
 	return $settings;
 }
