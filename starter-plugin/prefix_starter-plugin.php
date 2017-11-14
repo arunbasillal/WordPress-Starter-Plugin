@@ -55,28 +55,36 @@
 if ( ! defined('ABSPATH') ) exit;
 
 /**
- * Plugin name and directory constants
+ * Define constants
  *
  * @since 		1.0
- * @constant 	PREFIX_STARTER_PLUGIN		The name of the plugin - 'starter-plugin'
- * @constant	PREFIX_STARTER_PLUGIN_DIR	The absolute path to the plugin directory without the trailing slash - C:\xampp\htdocs\wp/wp-content/plugins/starter-plugin
  */
-if ( ! defined('PREFIX_STARTER_PLUGIN') )
+// The name of the plugin folder
+// 'starter-plugin'
+if (!defined('PREFIX_STARTER_PLUGIN'))
     define('PREFIX_STARTER_PLUGIN', trim(dirname(plugin_basename(__FILE__)), '/'));
 
-if ( ! defined('PREFIX_STARTER_PLUGIN_DIR') )
-    define('PREFIX_STARTER_PLUGIN_DIR', WP_PLUGIN_DIR . '/' . PREFIX_STARTER_PLUGIN);
+// The absolute path to the plugin directory without the trailing slash. Useful for using with includes
+// eg - C:\xampp\htdocs\
+if (!defined('PREFIX_STARTER_PLUGIN_DIR'))
+    define('PREFIX_STARTER_PLUGIN_DIR', plugin_dir_path( __FILE__ ));
+
+// The url to the plugin folder. Useful for referencing src
+// eg - http://localhost/wp/wp-content/plugins/starter-plugin/
+if (!defined('PREFIX_STARTER_PLUGIN_URL'))
+    define('PREFIX_STARTER_PLUGIN_URL', plugin_dir_url( __FILE__ ));
+
+// Plugin version constant
+if ( ! defined('PREFIX_VERSION_NUM') )
+    define('PREFIX_VERSION_NUM', '1.0');
 
 /**
  * Add plugin version to database
  *
  * @since 		1.0
- * @constant 	PREFIX_VERSION_NUM		the version number of the current version
  * @refer		https://codex.wordpress.org/Creating_Tables_with_Plugins#Adding_an_Upgrade_Function
  */
-if ( ! defined('PREFIX_VERSION_NUM') )
-    define('PREFIX_VERSION_NUM', '1.0');
-update_option('abl_prefix_version', PREFIX_VERSION_NUM);	// Change this to add_option if a release needs to check installed version. Refer the @refer url.
+update_option('abl_prefix_version', PREFIX_VERSION_NUM);	// Change this to add_option if a release needs to check installed version.
 
 // Load everything
 require_once( PREFIX_STARTER_PLUGIN_DIR . '/admin/prefix_starter-plugin-loader.php');
