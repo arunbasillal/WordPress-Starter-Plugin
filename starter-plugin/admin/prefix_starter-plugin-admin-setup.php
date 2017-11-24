@@ -58,12 +58,16 @@ function prefix_register_settings() {
 add_action( 'admin_init', 'prefix_register_settings' );
 
 /**
- * Validate And Sanitize User Input Before Its Saved To Database
+ * Validate and sanitize user input before its saved to database
  *
  * @since 		1.0
  */
-function prefix_validater_and_sanitizer ( $input ) {
-	return $input;
+function prefix_validater_and_sanitizer ( $settings ) {
+	
+	// Sanitize text field
+	// $settings['text_input'] = sanitize_text_field($settings['text_input']);
+	
+	return $settings;
 }
 			
 /**
