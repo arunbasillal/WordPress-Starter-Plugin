@@ -59,24 +59,25 @@ if ( ! defined('ABSPATH') ) exit;
  *
  * @since 		1.0
  */
-// The name of the plugin folder
-// 'starter-plugin'
-if (!defined('PREFIX_STARTER_PLUGIN'))
-    define('PREFIX_STARTER_PLUGIN', trim(dirname(plugin_basename(__FILE__)), '/'));
+ 
+	// The name of the plugin folder
+	// eg - 'starter-plugin'
+	if (!defined('PREFIX_STARTER_PLUGIN'))
+		define('PREFIX_STARTER_PLUGIN', trim(dirname(plugin_basename(__FILE__)), '/'));
 
-// The absolute path to the plugin directory without the trailing slash. Useful for using with includes
-// eg - C:\xampp\htdocs\
-if (!defined('PREFIX_STARTER_PLUGIN_DIR'))
-    define('PREFIX_STARTER_PLUGIN_DIR', plugin_dir_path( __FILE__ ));
+	// The absolute path to the plugin directory with the trailing slash. Useful for using with includes
+	// eg - /var/www/html/wp-content/plugins/starter-plugin/
+	if (!defined('PREFIX_STARTER_PLUGIN_DIR'))
+		define('PREFIX_STARTER_PLUGIN_DIR', plugin_dir_path( __FILE__ ));
 
-// The url to the plugin folder. Useful for referencing src
-// eg - http://localhost/wp/wp-content/plugins/starter-plugin/
-if (!defined('PREFIX_STARTER_PLUGIN_URL'))
-    define('PREFIX_STARTER_PLUGIN_URL', plugin_dir_url( __FILE__ ));
+	// The url to the plugin folder with the trailing slash. Useful for referencing src
+	// eg - http://localhost/wp/wp-content/plugins/starter-plugin/
+	if (!defined('PREFIX_STARTER_PLUGIN_URL'))
+		define('PREFIX_STARTER_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
-// Plugin version constant
-if ( ! defined('PREFIX_VERSION_NUM') )
-    define('PREFIX_VERSION_NUM', '1.0');
+	// Plugin version constant
+	if ( ! defined('PREFIX_VERSION_NUM') )
+		define('PREFIX_VERSION_NUM', '1.0');
 
 /**
  * Add plugin version to database
@@ -87,7 +88,7 @@ if ( ! defined('PREFIX_VERSION_NUM') )
 update_option('abl_prefix_version', PREFIX_VERSION_NUM);	// Change this to add_option if a release needs to check installed version.
 
 // Load everything
-require_once( PREFIX_STARTER_PLUGIN_DIR . '/admin/prefix_starter-plugin-loader.php');
+require_once( PREFIX_STARTER_PLUGIN_DIR . 'admin/prefix_starter-plugin-loader.php');
 
 // Register activation hook (this has to be in the main plugin file.)
 register_activation_hook( __FILE__, 'prefix_activate_plugin' );

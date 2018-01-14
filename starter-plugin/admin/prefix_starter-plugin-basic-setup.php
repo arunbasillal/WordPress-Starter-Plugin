@@ -30,7 +30,7 @@ function prefix_activate_plugin() {
  * @since	1.0
  */
 function prefix_load_plugin_textdomain() {
-    load_plugin_textdomain( 'abl_prefix_td', FALSE, PREFIX_STARTER_PLUGIN_DIR . '/languages/' );
+    load_plugin_textdomain( 'abl_prefix_td', FALSE, PREFIX_STARTER_PLUGIN_DIR . 'languages/' );
 }
 add_action( 'plugins_loaded', 'prefix_load_plugin_textdomain' );
 
