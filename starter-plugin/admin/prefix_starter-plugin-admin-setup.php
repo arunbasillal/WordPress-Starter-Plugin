@@ -87,3 +87,23 @@ function prefix_get_settings() {
 	
 	return $settings;
 }
+
+/**
+ * Enqueue Admin CSS and JS
+ *
+ * @since	1.0
+ */
+function prefix_enqueue_css_js( $hook ) {
+	
+    // Load only on Starer Plugin plugin pages
+	if ( $hook != "settings_page_starter-plugin" ) {
+		return;
+	}
+	
+	// Main CSS
+	// wp_enqueue_style( 'prefix-admin-main-css', PREFIX_STARTER_PLUGIN_URL . 'admin/css/main.css', '', PREFIX_VERSION_NUM );
+	
+	// Main JS
+    // wp_enqueue_script( 'prefix-admin-main-js', PREFIX_STARTER_PLUGIN_URL . 'admin/js/main.js', array( 'jquery' ), false, true );
+}
+add_action( 'admin_enqueue_scripts', 'prefix_enqueue_css_js' );
