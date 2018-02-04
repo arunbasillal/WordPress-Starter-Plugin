@@ -37,17 +37,20 @@ function prefix_general_settings_field_callback() {
 		<!-- Setting one -->
 		<input type="checkbox" name="prefix_settings[setting_one]" id="prefix_settings[setting_one]" value="1" 
 			<?php if ( isset( $settings['setting_one'] ) ) { checked( '1', $settings['setting_one'] ); } ?>>
-			<label for="prefix_settings[setting_one]"><?php esc_html_e('Setting one', 'abl_prefix_td') ?></label>
+			<label for="prefix_settings[setting_one]"><?php _e('Setting one', 'abl_prefix_td') ?></label>
 			<br>
 			
 		<!-- Setting two -->
 		<input type="checkbox" name="prefix_settings[setting_two]" id="prefix_settings[setting_two]" value="1" 
 			<?php if ( isset( $settings['setting_two'] ) ) { checked( '1', $settings['setting_two'] ); } ?>>
-			<label for="prefix_settings[setting_two]"><?php esc_html_e('Setting two', 'abl_prefix_td') ?></label>
+			<label for="prefix_settings[setting_two]"><?php _e('Setting two', 'abl_prefix_td') ?></label>
 			<br>
 		
+		<!-- Text Input -->
+		<input type="text" name="prefix_settings[text_input]" class="regular-text" value="<?php if ( isset( $settings['text_input'] ) && ( ! empty($settings['text_input']) ) ) echo esc_attr($settings['text_input']); ?>"/>
+		<br>
+		
 	</fieldset>
-
 	<?php
 }
  

@@ -65,7 +65,7 @@ add_action( 'admin_init', 'prefix_register_settings' );
 function prefix_validater_and_sanitizer ( $settings ) {
 	
 	// Sanitize text field
-	// $settings['text_input'] = sanitize_text_field($settings['text_input']);
+	$settings['text_input'] = sanitize_text_field($settings['text_input']);
 	
 	return $settings;
 }
