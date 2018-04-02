@@ -6,7 +6,7 @@
  * Author: Arun Basil Lal
  * Author URI: https://millionclues.com
  * Version: 1.0
- * Text Domain: abl_prefix_td
+ * Text Domain: starter-plugin
  * Domain Path: /languages
  * License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -41,7 +41,7 @@
  * - Plugin folder slug: starter-plugin (S&R)
  * - Decide on a prefix for the plugin (S&R)
  * - Plugin description
- * - Text domain. (S&R)
+ * - Text domain. Text domain for plugins has to be the folder name of the plugin. For eg. if your plugin is in /wp-content/plugins/abc-def/ folder text domain should be abc-def (S&R)
  * - Update prefix_settings_link() 		in \admin\basic-setup.php
  * - Update prefix_footer_text()		in \admin\basic-setup.php
  * - Update prefix_add_menu_links() 	in \admin\admin-setup.php

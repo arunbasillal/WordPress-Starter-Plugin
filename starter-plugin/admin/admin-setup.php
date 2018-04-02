@@ -19,7 +19,7 @@ if ( ! defined('ABSPATH') ) exit;
  * @refer	https://developer.wordpress.org/plugins/administration-menus/
  */
 function prefix_add_menu_links() {
-	add_options_page ( __('Starter Plugin','abl_prefix_td'), __('Starter Plugin','abl_prefix_td'), 'update_core', 'starter-plugin','prefix_admin_interface_render'  );
+	add_options_page ( __('Starter Plugin','starter-plugin'), __('Starter Plugin','starter-plugin'), 'update_core', 'starter-plugin','prefix_admin_interface_render'  );
 }
 add_action( 'admin_menu', 'prefix_add_menu_links' );
 
@@ -40,7 +40,7 @@ function prefix_register_settings() {
 	// Register A New Section
     add_settings_section(
         'prefix_general_settings_section',							// ID
-        __('Starter Plugin General Settings', 'abl_prefix_td'),		// Title
+        __('Starter Plugin General Settings', 'starter-plugin'),		// Title
         'prefix_general_settings_section_callback',					// Callback Function
         'starter-plugin'											// Page slug
     );
@@ -48,7 +48,7 @@ function prefix_register_settings() {
 	// General Settings
     add_settings_field(
         'prefix_general_settings_field',							// ID
-        __('General Settings', 'abl_prefix_td'),					// Title
+        __('General Settings', 'starter-plugin'),					// Title
         'prefix_general_settings_field_callback',					// Callback function
         'starter-plugin',											// Page slug
         'prefix_general_settings_section'							// Settings Section ID

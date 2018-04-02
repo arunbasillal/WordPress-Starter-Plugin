@@ -30,7 +30,7 @@ function prefix_activate_plugin() {
  * @since	1.0
  */
 function prefix_load_plugin_textdomain() {
-    load_plugin_textdomain( 'abl_prefix_td', FALSE, PREFIX_STARTER_PLUGIN_DIR . 'languages/' );
+    load_plugin_textdomain( 'starter-plugin', FALSE, PREFIX_STARTER_PLUGIN_DIR . 'languages/' );
 }
 add_action( 'plugins_loaded', 'prefix_load_plugin_textdomain' );
 
@@ -42,7 +42,7 @@ add_action( 'plugins_loaded', 'prefix_load_plugin_textdomain' );
 function prefix_settings_link( $links ) {
 	return array_merge(
 		array(
-			'settings' => '<a href="' . admin_url( 'options-general.php?page=starter-plugin' ) . '">' . __( 'Settings', 'abl_prefix_td' ) . '</a>'
+			'settings' => '<a href="' . admin_url( 'options-general.php?page=starter-plugin' ) . '">' . __( 'Settings', 'starter-plugin' ) . '</a>'
 		),
 		$links
 	);
@@ -83,7 +83,7 @@ function prefix_footer_text($default) {
 		return $default;
 	}
 	
-    $prefix_footer_text = sprintf( __( 'If you like this plugin, please <a href="%s" target="_blank">make a donation</a> or leave me a <a href="%s" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a> rating to support continued development. Thanks a bunch!', 'abl_prefix_td' ), 
+    $prefix_footer_text = sprintf( __( 'If you like this plugin, please <a href="%s" target="_blank">make a donation</a> or leave me a <a href="%s" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a> rating to support continued development. Thanks a bunch!', 'starter-plugin' ), 
 								'http://millionclues.com/donate/',
 								'https://wordpress.org/support/plugin/starter-plugin/reviews/?rate=5#new-post' 
 						);
