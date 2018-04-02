@@ -14,7 +14,7 @@
 /**
  * This plugin was developed using the WordPress starter plugin template by Arun Basil Lal <arunbasillal@gmail.com>
  * Please leave this credit and the directory structure intact for future developers who might read the code. <-- Delete this line though.
- * @Github		https://github.com/arunbasillal/WordPress-Starter-Plugin
+ * @Github https://github.com/arunbasillal/WordPress-Starter-Plugin
  */
  
 /**
@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Define constants
  *
- * @since 		1.0
+ * @since 1.0
  */
 if ( ! defined( 'PREFIX_VERSION_NUM' ) ) 		define( 'PREFIX_VERSION_NUM'			, '1.0' ); // Plugin version constant
 if ( ! defined( 'PREFIX_STARTER_PLUGIN' ) )		define( 'PREFIX_STARTER_PLUGIN'		, trim( dirname( plugin_basename( __FILE__ ) ), '/' ) ); // Name of the plugin folder eg - 'starter-plugin'
@@ -68,8 +68,8 @@ if ( ! defined( 'PREFIX_STARTER_PLUGIN_URL' ) )	define( 'PREFIX_STARTER_PLUGIN_U
 /**
  * Add plugin version to database
  *
- * @since 		1.0
- * @refer		https://codex.wordpress.org/Creating_Tables_with_Plugins#Adding_an_Upgrade_Function
+ * @since 1.0
+ * @refer https://codex.wordpress.org/Creating_Tables_with_Plugins#Adding_an_Upgrade_Function
  */
 update_option( 'abl_prefix_version', PREFIX_VERSION_NUM );	// Change this to add_option if a release needs to check installed version.
 

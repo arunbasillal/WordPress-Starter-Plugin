@@ -15,8 +15,8 @@ if ( ! defined('ABSPATH') ) exit;
 /**
  * Add admin menu pages
  *
- * @since 	1.0
- * @refer	https://developer.wordpress.org/plugins/administration-menus/
+ * @since 1.0
+ * @refer https://developer.wordpress.org/plugins/administration-menus/
  */
 function prefix_add_menu_links() {
 	add_options_page ( __('Starter Plugin','starter-plugin'), __('Starter Plugin','starter-plugin'), 'update_core', 'starter-plugin','prefix_admin_interface_render'  );
@@ -26,7 +26,7 @@ add_action( 'admin_menu', 'prefix_add_menu_links' );
 /**
  * Register Settings
  *
- * @since 	1.0
+ * @since 1.0
  */
 function prefix_register_settings() {
 
@@ -60,7 +60,7 @@ add_action( 'admin_init', 'prefix_register_settings' );
 /**
  * Validate and sanitize user input before its saved to database
  *
- * @since 		1.0
+ * @since 1.0
  */
 function prefix_validater_and_sanitizer ( $settings ) {
 	
@@ -73,8 +73,9 @@ function prefix_validater_and_sanitizer ( $settings ) {
 /**
  * Get settings from database
  *
- * @since 	1.0
  * @return	Array	A merged array of default and settings saved in database. 
+ *
+ * @since 1.0
  */
 function prefix_get_settings() {
 
@@ -91,7 +92,7 @@ function prefix_get_settings() {
 /**
  * Enqueue Admin CSS and JS
  *
- * @since	1.0
+ * @since 1.0
  */
 function prefix_enqueue_css_js( $hook ) {
 	

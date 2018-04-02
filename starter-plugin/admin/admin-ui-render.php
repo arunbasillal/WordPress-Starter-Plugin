@@ -9,7 +9,7 @@
  */
 
 // Exit if accessed directly
-if ( ! defined('ABSPATH') ) exit;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
  * Callback function for General Settings section
