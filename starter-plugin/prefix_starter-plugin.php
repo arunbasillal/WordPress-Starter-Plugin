@@ -4,7 +4,7 @@
  * Plugin URI: http://millionclues.com
  * Description: Edit me.
  * Author: Arun Basil Lal
- * Author URI: http://millionclues.com
+ * Author URI: https://millionclues.com
  * Version: 1.0
  * Text Domain: abl_prefix_td
  * Domain Path: /languages
@@ -13,7 +13,7 @@
 
 /**
  * This plugin was developed using the WordPress starter plugin template by Arun Basil Lal <arunbasillal@gmail.com>
- * Please leave this credit and the directory structure intact for future developers who might read the code. 
+ * Please leave this credit and the directory structure intact for future developers who might read the code. <-- Delete this line though.
  * @Github		https://github.com/arunbasillal/WordPress-Starter-Plugin
  */
  
@@ -21,12 +21,13 @@
  * ~ Directory Structure ~
  *
  * /admin/ 						- Plugin backend stuff.
+ * /functions/					- Functions and plugin operations.
  * /includes/					- External third party classes and libraries.
  * /languages/					- Translation files go here. 
- * /public/						- Front end files go here.
+ * /public/						- Front end files and functions that matter on the front end go here.
  * index.php					- Dummy file.
  * license.txt					- GPL v2
- * prefix_starter-plugin.php	- File containing plugin name and other version info for WordPress.
+ * prefix_starter-plugin.php	- Main plugin file containing plugin name and other version info for WordPress.
  * readme.txt					- Readme for WordPress plugin repository. https://wordpress.org/plugins/files/2017/03/readme.txt
  * uninstall.php				- Fired when the plugin is uninstalled. 
  */
@@ -41,11 +42,11 @@
  * - Decide on a prefix for the plugin (S&R)
  * - Plugin description
  * - Text domain. (S&R)
- * - Update prefix_settings_link() 		in \admin\prefix_starter-plugin-basic-setup.php
- * - Update prefix_footer_text()		in \admin\prefix_starter-plugin-basic-setup.php
- * - Update prefix_add_menu_links() 	in \admin\prefix_starter-plugin-admin-setup.php
- * - Update prefix_register_settings() 	in \admin\prefix_starter-plugin-admin-setup.php
- * - Update UI format and settings		in \admin\prefix_starter-plugin-admin-ui-render.php
+ * - Update prefix_settings_link() 		in \admin\basic-setup.php
+ * - Update prefix_footer_text()		in \admin\basic-setup.php
+ * - Update prefix_add_menu_links() 	in \admin\admin-setup.php
+ * - Update prefix_register_settings() 	in \admin\admin-setup.php
+ * - Update UI format and settings		in \admin\admin-ui-render.php
  * - Update uninstall.php
  * - Update readme.txt
  * - Update PREFIX_VERSION_NUM 			in prefix_starter-plugin.php (keep this line for future updates)
@@ -88,7 +89,7 @@ if ( ! defined('ABSPATH') ) exit;
 update_option('abl_prefix_version', PREFIX_VERSION_NUM);	// Change this to add_option if a release needs to check installed version.
 
 // Load everything
-require_once( PREFIX_STARTER_PLUGIN_DIR . 'admin/prefix_starter-plugin-loader.php');
+require_once( PREFIX_STARTER_PLUGIN_DIR . 'loader.php' );
 
 // Register activation hook (this has to be in the main plugin file.)
 register_activation_hook( __FILE__, 'prefix_activate_plugin' );
