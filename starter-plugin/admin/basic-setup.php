@@ -12,7 +12,7 @@
  */
 
 // Exit if accessed directly
-if ( ! defined('ABSPATH') ) exit;
+if ( ! defined( 'ABSPATH' ) ) exit;
  
 /**
  * Plugin activatation todo list
