@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Starter Plugin
- * Plugin URI: http://millionclues.com
- * Description: Edit me.
+ * Plugin URI: https://github.com/arunbasillal/WordPress-Starter-Plugin
+ * Description: A starter plugin for WordPress complete with inline documentation and working admin options page.
  * Author: Arun Basil Lal
  * Author URI: https://millionclues.com
  * Version: 1.0
@@ -13,7 +13,7 @@
 
 /**
  * This plugin was developed using the WordPress starter plugin template by Arun Basil Lal <arunbasillal@gmail.com>
- * Please leave this credit and the directory structure intact for future developers who might read the code. <-- Delete this line though.
+ * Please leave this credit and the directory structure intact for future developers who might read the code.
  * @Github https://github.com/arunbasillal/WordPress-Starter-Plugin
  */
  
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since 1.0
  */
-if ( ! defined( 'PREFIX_VERSION_NUM' ) ) 		define( 'PREFIX_VERSION_NUM'			, '1.0' ); // Plugin version constant
+if ( ! defined( 'PREFIX_VERSION_NUM' ) ) 		define( 'PREFIX_VERSION_NUM'		, '1.0' ); // Plugin version constant
 if ( ! defined( 'PREFIX_STARTER_PLUGIN' ) )		define( 'PREFIX_STARTER_PLUGIN'		, trim( dirname( plugin_basename( __FILE__ ) ), '/' ) ); // Name of the plugin folder eg - 'starter-plugin'
 if ( ! defined( 'PREFIX_STARTER_PLUGIN_DIR' ) )	define( 'PREFIX_STARTER_PLUGIN_DIR'	, plugin_dir_path( __FILE__ ) ); // Plugin directory absolute path with the trailing slash. Useful for using with includes eg - /var/www/html/wp-content/plugins/starter-plugin/
 if ( ! defined( 'PREFIX_STARTER_PLUGIN_URL' ) )	define( 'PREFIX_STARTER_PLUGIN_URL'	, plugin_dir_url( __FILE__ ) ); // URL to the plugin folder with the trailing slash. Useful for referencing src eg - http://localhost/wp/wp-content/plugins/starter-plugin/
@@ -68,13 +68,13 @@ if ( ! defined( 'PREFIX_STARTER_PLUGIN_URL' ) )	define( 'PREFIX_STARTER_PLUGIN_U
 /**
  * Add plugin version to database
  *
- * @since 1.0
  * @refer https://codex.wordpress.org/Creating_Tables_with_Plugins#Adding_an_Upgrade_Function
+ * @since 1.0
  */
 update_option( 'abl_prefix_version', PREFIX_VERSION_NUM );	// Change this to add_option if a release needs to check installed version.
 
 // Load everything
 require_once( PREFIX_STARTER_PLUGIN_DIR . 'loader.php' );
 
-// Register activation hook (this has to be in the main plugin file.)
+// Register activation hook (this has to be in the main plugin file or refer bit.ly/2qMbn2O)
 register_activation_hook( __FILE__, 'prefix_activate_plugin' );

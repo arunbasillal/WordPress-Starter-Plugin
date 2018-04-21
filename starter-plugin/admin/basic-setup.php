@@ -102,7 +102,7 @@ function prefix_footer_version($default) {
 	
 	// Retun default on non-plugin pages
 	$screen = get_current_screen();
-	if ( $screen->id !== "settings_page_starter-plugin" ) {
+	if ( $screen->id !== 'settings_page_starter-plugin' ) {
 		return $default;
 	}
 	

@@ -1,19 +1,20 @@
-# WordPress-Starter-Plugin
+# WordPress Starter Plugin
 
-A well documented starter plugin for quick WordPress plugin development. 
+A well documented starter plugin for quick WordPress plugin development complete with inline documentation and working admin options page.
 
 
 # Directory Structure
 
 - /admin/ 						- Plugin backend stuff.
+- /functions/					- Functions and plugin operations.
 - /includes/					- External third party classes and libraries.
 - /languages/					- Translation files go here. 
-- /public/						- Front end files go here.
-- index.php					- Dummy file.
+- /public/						- Front end files and functions that matter on the front end go here.
+- index.php						- Dummy file.
 - license.txt					- GPL v2
-- prefix_starter-plugin.php	- File containing plugin name and other version info for WordPress.
+- prefix_starter-plugin.php		- Main plugin file containing plugin name and other version info for WordPress.
 - readme.txt					- Readme for WordPress plugin repository. https://wordpress.org/plugins/files/2017/03/readme.txt
-- uninstall.php				- Fired when the plugin is uninstalled. 
+- uninstall.php					- Fired when the plugin is uninstalled. 
 
 
 # TODO
@@ -22,13 +23,13 @@ A well documented starter plugin for quick WordPress plugin development.
 - Plugin name: Starter Plugin (S&R)
 - Plugin folder slug: starter-plugin (S&R)
 - Decide on a prefix for the plugin (S&R)
-- Plugin description
-- Text domain. (S&R)
-- Update prefix_settings_link() 	in \admin\prefix_starter-plugin-basic-setup.php
-- Update prefix_footer_text()		in \admin\prefix_starter-plugin-basic-setup.php
-- Update prefix_add_menu_links() 	in \admin\prefix_starter-plugin-admin-setup.php
-- Update prefix_register_settings() in \admin\prefix_starter-plugin-admin-setup.php
-- Update UI format and settings		in \admin\prefix_starter-plugin-admin-ui-render.php
+- Plugin description					in prefix_starter-plugin.php
+- Text domain. Text domain for plugins has to be the folder name of the plugin. For eg. if your plugin is in /wp-content/plugins/abc-def/ folder text domain should be abc-def (S&R)
+- Update prefix_settings_link() 		in \admin\basic-setup.php
+- Update prefix_footer_text()			in \admin\basic-setup.php
+- Update prefix_add_menu_links() 		in \admin\admin-setup.php
+- Update prefix_register_settings() 	in \admin\admin-setup.php
+- Update UI format and settings			in \admin\admin-ui-render.php
 - Update uninstall.php
 - Update readme.txt
-- Update PREFIX_VERSION_NUM 		in prefix_starter-plugin.php (keep this line for future updates)
+- Update PREFIX_VERSION_NUM 			in prefix_starter-plugin.php (keep this line for future updates)
