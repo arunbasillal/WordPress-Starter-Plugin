@@ -13,7 +13,7 @@ A well documented starter plugin for quick WordPress plugin development complete
 - index.php						- Dummy file.
 - license.txt					- GPL v2
 - prefix_starter-plugin.php		- Main plugin file containing plugin name and other version info for WordPress.
-- readme.txt					- Readme for WordPress plugin repository. https://wordpress.org/plugins/files/2017/03/readme.txt
+- readme.txt					- Readme for WordPress plugin repository. https://wordpress.org/plugins/files/2018/01/readme.txt
 - uninstall.php					- Fired when the plugin is uninstalled. 
 
 
