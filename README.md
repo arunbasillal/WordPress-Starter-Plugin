@@ -27,8 +27,8 @@ A well documented starter plugin for quick WordPress plugin development complete
 - Text domain. Text domain for plugins has to be the folder name of the plugin. For eg. if your plugin is in /wp-content/plugins/abc-def/ folder text domain should be abc-def (S&R)
 - Update prefix_settings_link() 		in \admin\basic-setup.php
 - Update prefix_footer_text()			in \admin\basic-setup.php
-- Update prefix_add_menu_links() 		in \admin\admin-setup.php
-- Update prefix_register_settings() 	in \admin\admin-setup.php
+- Update prefix_add_menu_links() 		in \admin\admin-ui-setup.php
+- Update prefix_register_settings() 	in \admin\admin-ui-setup.php
 - Update UI format and settings			in \admin\admin-ui-render.php
 - Update uninstall.php
 - Update readme.txt

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 require_once( PREFIX_STARTER_PLUGIN_DIR . 'admin/basic-setup.php' );
 
 // Load admin setup. Register menus and settings
-require_once( PREFIX_STARTER_PLUGIN_DIR . 'admin/admin-setup.php' );
+require_once( PREFIX_STARTER_PLUGIN_DIR . 'admin/admin-ui-setup.php' );
 
 // Render Admin UI
 require_once( PREFIX_STARTER_PLUGIN_DIR . 'admin/admin-ui-render.php' );
