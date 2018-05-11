@@ -14,7 +14,7 @@
 /**
  * This plugin was developed using the WordPress starter plugin template by Arun Basil Lal <arunbasillal@gmail.com>
  * Please leave this credit and the directory structure intact for future developers who might read the code.
- * @Github https://github.com/arunbasillal/WordPress-Starter-Plugin
+ * @GitHub https://github.com/arunbasillal/WordPress-Starter-Plugin
  */
  
 /**

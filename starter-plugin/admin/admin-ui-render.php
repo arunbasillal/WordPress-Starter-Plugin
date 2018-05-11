@@ -48,7 +48,7 @@ function prefix_general_settings_field_callback() {
 		
 		<!-- Text Input -->
 		<input type="text" name="prefix_settings[text_input]" class="regular-text" value="<?php if ( isset( $settings['text_input'] ) && ( ! empty($settings['text_input']) ) ) echo esc_attr($settings['text_input']); ?>"/>
-		<p class="description" id="tagline-description"><?php _e('Description of the text input field', 'starter-plugin'); ?></p>
+		<p class="description"><?php _e('Description of the text input field', 'starter-plugin'); ?></p>
 		
 	</fieldset>
 	<?php
