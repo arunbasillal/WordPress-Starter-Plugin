@@ -66,12 +66,26 @@ if ( ! defined( 'PREFIX_STARTER_PLUGIN_DIR' ) )	define( 'PREFIX_STARTER_PLUGIN_D
 if ( ! defined( 'PREFIX_STARTER_PLUGIN_URL' ) )	define( 'PREFIX_STARTER_PLUGIN_URL'	, plugin_dir_url( __FILE__ ) ); // URL to the plugin folder with the trailing slash. Useful for referencing src eg - http://localhost/wp/wp-content/plugins/starter-plugin/
 
 /**
- * Add plugin version to database
+ * Database upgrade todo
  *
- * @refer https://codex.wordpress.org/Creating_Tables_with_Plugins#Adding_an_Upgrade_Function
  * @since 1.0
  */
-update_option( 'abl_prefix_version', PREFIX_VERSION_NUM );	// Change this to add_option if a release needs to check installed version.
+function prefix_upgrader() {
+	
+	// Get the current version of the plugin stored in the database.
+	$current_ver = get_option( 'abl_prefix_version', '0.0' );
+	
+	// Return if we are already on updated version. 
+	if ( version_compare( $current_ver, PREFIX_VERSION_NUM, '==' ) ) {
+		return;
+	}
+	
+	// This part will only be excuted once when a user upgrades from an older version to a newer version.
+	
+	// Finally add the current version to the database. Upgrade todo complete. 
+	update_option( 'abl_prefix_version', PREFIX_VERSION_NUM );
+}
+add_action( 'admin_init', 'prefix_upgrader' );
 
 // Load everything
 require_once( PREFIX_STARTER_PLUGIN_DIR . 'loader.php' );
