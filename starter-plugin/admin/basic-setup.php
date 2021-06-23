@@ -47,7 +47,7 @@ function prefix_settings_link( $links ) {
 		$links
 	);
 }
-add_filter( 'plugin_action_links_' . PREFIX_STARTER_PLUGIN . '/prefix_starter-plugin.php', 'prefix_settings_link' );
+add_filter( 'plugin_action_links_' . PREFIX_STARTER_PLUGIN . '/starter-plugin.php', 'prefix_settings_link' );
 
 /**
  * Add donate and other links to plugins list
@@ -55,7 +55,7 @@ add_filter( 'plugin_action_links_' . PREFIX_STARTER_PLUGIN . '/prefix_starter-pl
  * @since 1.0
  */
 function prefix_plugin_row_meta( $links, $file ) {
-	if ( strpos( $file, 'prefix_starter-plugin.php' ) !== false ) {
+	if ( strpos( $file, 'starter-plugin.php' ) !== false ) {
 		$new_links = array(
 				'donate' 	=> '<a href="http://millionclues.com/donate/" target="_blank">Donate</a>',
 				'kuttappi' 	=> '<a href="http://kuttappi.com/" target="_blank">My Travelogue</a>',
